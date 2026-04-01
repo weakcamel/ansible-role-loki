@@ -5,6 +5,9 @@ Deploy and configure [Loki/Promtail](https://github.com/grafana/loki) using Ansi
 
 This is a fork of a simple and extremely useful diogenxs.loki role.
 
+**NOTE** that this role is now deprecated; Grafana have released an official Loki role, see
+https://github.com/grafana/grafana-ansible-collection/tree/main/roles/loki
+
 Requirements
 ------------
 
