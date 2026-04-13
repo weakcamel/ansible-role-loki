@@ -89,3 +89,11 @@
   notify: "Restart {{ item }}"
   loop: "{{ loki_bins }}"
   when: item == 'loki' or item == 'promtail'
+
+- name: Enable systemd service unit
+  ansible.builtin.systemd:
+    name: "{{ item }}"
+    daemon_reload: True
+    enabled: True
+  loop: "{{ loki_bins }}"
+  when: item == 'loki' or item == 'promtail'
